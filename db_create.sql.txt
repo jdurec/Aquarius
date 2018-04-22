@@ -1,0 +1,20 @@
+// On Linux
+npm install mysql
+
+
+// On mysql
+
+
+
+CREATE DATABASE aquarius;
+CREATE USER 'gary'@'localhost' IDENTIFIED BY 'plants need water';
+
+USE aquarius;
+
+CREATE TABLE plants (name VARCHAR(20), id INT AUTO_INCREMENT PRIMARY KEY, type VARCHAR(20), planted DATE, death DATE);
+CREATE TABLE detectors (detectorID INT, detectorTypeID INT, calibLevelAir INT, calibLevelWater INT);
+CREATE TABLE humidityMeasurements (time TIMESTAMP, plantID INT, value INT, detectorID INT);
+
+INSERT INTO plants (name, id, type, planted, death) VALUES ("My only rose",1,"Rose", "2017-05-30", NULL);
+INSERT INTO detectorHumid  (plantID ,detectorTypeID ) VALUES (1,1);
+
